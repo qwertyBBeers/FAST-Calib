@@ -139,15 +139,6 @@ python scripts/distance_filter_tool.py /path/to/data.bag /path/to/output_dir
 
 bag 안의 LiDAR 메시지 타입을 자동으로 확인하고 PCD 변환 및 필터 설정에 필요한 정보를 확인하는 용도입니다.
 
-## Git LFS
-
-이 저장소는 `.bag`, `.pcd` 같은 대용량 데이터를 Git LFS로 추적합니다. clone 후 대용량 파일이 포인터 파일로만 보이면 다음을 실행합니다.
-
-```bash
-git lfs install
-git lfs pull
-```
-
 ## 참고 이미지
 
 <p align="center">
