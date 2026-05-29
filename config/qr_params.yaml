@@ -1,0 +1,91 @@
+# Camera intrinsics  
+  # mid360
+  # fx: 843.501050605967
+  # fy: 845.199690011973
+  # cx: 321.017429415352
+  # cy: 239.294896816737
+  # k1: -0.465219389887045
+  # k2: 0.237050091701749
+  # p1: 0.00521922785740506
+  # p2: 0.000418186016514835
+
+  # avia
+  # fx: 1215.31801774424
+  # fy: 1214.72961288138
+  # cx: 1047.86571859677
+  # cy: 745.068353101898
+  # k1: -0.33574781188503
+  # k2: 0.10996870793601
+  # p1: 0.000157303079833973
+  # p2: 0.000544930726278493
+
+  # ouster
+  # fx: 1466.16500795563
+  # fy: 1465.32657394431
+  # cx: 1214.39964380518
+  # cy: 1010.97681425650
+  # k1: -0.0458344972140773
+  # k2: 0.0896961240772692
+  # p1: -0.000731746350601389
+  # p2: -0.000201478932371979
+
+  # multi-scene
+# Camera intrinsics
+  fx: 571.12255855
+  fy: 571.25929054
+  cx: 645.85019135
+  cy: 366.42609325
+  k1: -0.21019637
+  k2: 0.03239249
+  p1: -0.00041443
+  p2: 0.00024614
+
+# Calibration target parameters
+  marker_size: 0.10 # ArUco marker size
+  delta_width_qr_center: 0.275 # Half the distance between the centers of two markers in the horizontal direction 
+  delta_height_qr_center: 0.175 # Half the distance between the centers of two markers in the vertical direction
+  delta_width_circles: 0.25 # Distance between the centers of two circles in the horizontal direction
+  delta_height_circles: 0.20 # Distance between the centers of two circles in the vertical direction
+  circle_radius: 0.06 # Radius of the circle 
+
+# Distance filter
+  #x_min: 0.5 # avia and mid360: 2.0 ouster: 1.5
+  #x_max: 10.0
+  #y_min: -5.5
+  #y_max: 10.0
+  #z_min: -10.5 # avia and mid360: -0.5 ouster: -0.8
+  #z_max: 300.0
+  
+# Distance filter
+  x_min: 0.4
+  x_max: 2.5
+  y_min: -3.0
+  y_max: 2.5
+  z_min: -1.5
+  z_max: 2.5
+
+  x_min: 0.3
+  x_max: 6.0
+  y_min: -3.0
+  y_max: 3.0
+  z_min: -1.5
+  z_max: 2.5
+
+# multi_scene_22
+# Distance filter for MID-360, target in front of LiDAR
+
+# multi_scene_33
+  #x_min: 0.5
+  #x_max: 1000.0
+  #y_min: -100.0
+  #y_max: 100.0
+  #z_min: -100.5
+  #z_max: 100.0
+
+# Input
+  lidar_topic: "/livox/lidar" # /ouster/points /livox/lidar
+  bag_path: "/catkin_ws/src/FAST-Calib/calib_data/fastcalib_scenes/ros2_bagfile.bag"
+  image_path: "/catkin_ws/src/FAST-Calib/calib_data/fastcalib_scenes/ros2_bagfile.png"
+
+# Output
+  output_path: "$(find fast_calib)/output"
